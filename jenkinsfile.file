@@ -20,7 +20,7 @@ pipeline {
 						}
         stage('Automated Test Execution') {
 										steps {
-										   bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\MSTest.exe" "/testcontainer:C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
+										   bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\MSTest.exe" "/test:C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
 											//bat '"C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe" "/test:C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'  
 											  }
 										   }
