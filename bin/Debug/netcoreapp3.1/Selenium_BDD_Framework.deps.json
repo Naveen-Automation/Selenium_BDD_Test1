@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.8.3",
           "NUnit": "3.13.0",
+          "NUnit.ConsoleRunner": "3.12.0",
           "NUnit3TestAdapter": "3.17.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "88.0.4324.9600",
@@ -424,6 +425,7 @@
           }
         }
       },
+      "NUnit.ConsoleRunner/3.12.0": {},
       "NUnit3TestAdapter/3.17.0": {
         "dependencies": {
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
@@ -1368,6 +1370,13 @@
       "sha512": "sha512-G+BOONgJKtNtprjGQ54l0m+Vq2VFCMh/H6ljuHfqrRlX6YkNy0GjMd5Nn0NpJidGpRd4gAOJsBqNuxr7Kgc/5g==",
       "path": "nunit/3.13.0",
       "hashPath": "nunit.3.13.0.nupkg.sha512"
+    },
+    "NUnit.ConsoleRunner/3.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZUtI8leU9ozCjLy4ZZ2X6ClU0hxfQtb95VOdmMA4SxIUvf62rIPxoHXS+jghvo5QxgRihGGcEp8xT3vCfgDdsA==",
+      "path": "nunit.consolerunner/3.12.0",
+      "hashPath": "nunit.consolerunner.3.12.0.nupkg.sha512"
     },
     "NUnit3TestAdapter/3.17.0": {
       "type": "package",

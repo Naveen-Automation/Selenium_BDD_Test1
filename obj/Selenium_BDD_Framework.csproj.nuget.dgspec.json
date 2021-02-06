@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\Selenium_BDD_Framework.csproj": {}
+    "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj": {}
   },
   "projects": {
-    "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\Selenium_BDD_Framework.csproj": {
+    "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\Selenium_BDD_Framework.csproj",
+        "projectUniqueName": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj",
         "projectName": "Selenium_BDD_Framework",
-        "projectPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\Selenium_BDD_Framework.csproj",
+        "projectPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj",
         "packagesPath": "C:\\Users\\navee\\.nuget\\packages\\",
-        "outputPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\obj\\",
+        "outputPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\navee\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,10 @@
             "NUnit": {
               "target": "Package",
               "version": "[3.13.0, )"
+            },
+            "NUnit.ConsoleRunner": {
+              "target": "Package",
+              "version": "[3.12.0, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",

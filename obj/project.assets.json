@@ -481,6 +481,9 @@
           "build/NUnit.props": {}
         }
       },
+      "NUnit.ConsoleRunner/3.12.0": {
+        "type": "package"
+      },
       "NUnit3TestAdapter/3.17.0": {
         "type": "package",
         "dependencies": {
@@ -2653,6 +2656,48 @@
         "lib/netstandard2.0/nunit.framework.xml",
         "nunit.3.13.0.nupkg.sha512",
         "nunit.nuspec"
+      ]
+    },
+    "NUnit.ConsoleRunner/3.12.0": {
+      "sha512": "ZUtI8leU9ozCjLy4ZZ2X6ClU0hxfQtb95VOdmMA4SxIUvf62rIPxoHXS+jghvo5QxgRihGGcEp8xT3vCfgDdsA==",
+      "type": "package",
+      "path": "nunit.consolerunner/3.12.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.txt",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "images/nunit_256.png",
+        "nunit.consolerunner.3.12.0.nupkg.sha512",
+        "nunit.consolerunner.nuspec",
+        "tools/agents/net20/nunit-agent-x86.exe",
+        "tools/agents/net20/nunit-agent-x86.exe.config",
+        "tools/agents/net20/nunit-agent.exe",
+        "tools/agents/net20/nunit-agent.exe.config",
+        "tools/agents/net20/nunit.agent.addins",
+        "tools/agents/net20/nunit.engine.api.dll",
+        "tools/agents/net20/nunit.engine.api.xml",
+        "tools/agents/net20/nunit.engine.core.dll",
+        "tools/agents/net20/testcentric.engine.metadata.dll",
+        "tools/agents/net40/nunit-agent-x86.exe",
+        "tools/agents/net40/nunit-agent-x86.exe.config",
+        "tools/agents/net40/nunit-agent.exe",
+        "tools/agents/net40/nunit-agent.exe.config",
+        "tools/agents/net40/nunit.agent.addins",
+        "tools/agents/net40/nunit.engine.api.dll",
+        "tools/agents/net40/nunit.engine.api.xml",
+        "tools/agents/net40/nunit.engine.core.dll",
+        "tools/agents/net40/testcentric.engine.metadata.dll",
+        "tools/nunit.console.nuget.addins",
+        "tools/nunit.engine.api.dll",
+        "tools/nunit.engine.api.xml",
+        "tools/nunit.engine.core.dll",
+        "tools/nunit.engine.dll",
+        "tools/nunit3-console.exe",
+        "tools/nunit3-console.exe.config",
+        "tools/testcentric.engine.metadata.dll"
       ]
     },
     "NUnit3TestAdapter/3.17.0": {
@@ -6759,6 +6804,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.8.3",
       "NUnit >= 3.13.0",
+      "NUnit.ConsoleRunner >= 3.12.0",
       "NUnit3TestAdapter >= 3.17.0",
       "Selenium.WebDriver >= 3.141.0",
       "Selenium.WebDriver.ChromeDriver >= 88.0.4324.9600",
@@ -6774,11 +6820,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\Selenium_BDD_Framework.csproj",
+      "projectUniqueName": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj",
       "projectName": "Selenium_BDD_Framework",
-      "projectPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\Selenium_BDD_Framework.csproj",
+      "projectPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj",
       "packagesPath": "C:\\Users\\navee\\.nuget\\packages\\",
-      "outputPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Jenkins_DCPipeline_Public\\obj\\",
+      "outputPath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\navee\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6814,6 +6860,10 @@
           "NUnit": {
             "target": "Package",
             "version": "[3.13.0, )"
+          },
+          "NUnit.ConsoleRunner": {
+            "target": "Package",
+            "version": "[3.12.0, )"
           },
           "NUnit3TestAdapter": {
             "target": "Package",
