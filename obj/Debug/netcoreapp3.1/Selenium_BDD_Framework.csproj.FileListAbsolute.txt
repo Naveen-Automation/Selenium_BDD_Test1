@@ -217,3 +217,4 @@ C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.pdb
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.genruntimeconfig.cache
+C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.csprojAssemblyReference.cache
