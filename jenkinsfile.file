@@ -1,6 +1,7 @@
 //Jenkins pipeline as a code
 
 //Grovy Variables
+solutionName='Selenium_BDD_Framework.sln'
 
 pipeline {
     agent any
@@ -13,13 +14,14 @@ pipeline {
         }
         stage('Build') {
 						steps {
-								bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "Selenium_BDD_Framework.sln"'
-								echo 'Build Succesfull'
+								//bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "Selenium_BDD_Framework.sln"'
+								bat 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe Selenium_BDD_Framework.sln'
 							  }
 						}
         stage('Test Execution') {
 								steps {
-										bat 'dotnet vstest "bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
+										//bat 'dotnet vstest "bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
+										bat 'dotnet vstest bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll'
 									  }
 								}
     }

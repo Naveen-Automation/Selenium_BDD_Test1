@@ -23,7 +23,7 @@ namespace Selenium_BDD_Framework
                     driver = new FirefoxDriver();
                     break;
             }
-            driver.Navigate().GoToUrl("http://www.google.com");
+            driver.Navigate().GoToUrl("http://www.gmail.com");
 
           
         }
