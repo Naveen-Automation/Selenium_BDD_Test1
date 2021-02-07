@@ -29,7 +29,7 @@ namespace Selenium_BDD_Framework
         }
 
         [When(@"I search text ""(.*)""")]
-        public void WhenISearchText(string searchText)
+        public void WhenISearchText()
         {
            
         }

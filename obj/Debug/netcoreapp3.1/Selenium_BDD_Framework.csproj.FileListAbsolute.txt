@@ -108,15 +108,15 @@ C:\NAVEEN\AUTOMATION\GIT Repositories\BDD_Framework_Lloyds\Selenium_BDD_Framewor
 C:\NAVEEN\AUTOMATION\GIT Repositories\BDD_Framework_Lloyds\Selenium_BDD_Framework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\BDD_Framework_Lloyds\Selenium_BDD_Framework\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.csproj.CopyComplete
 C:\NAVEEN\AUTOMATION\GIT Repositories\BDD_Framework_Lloyds\Selenium_BDD_Framework\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.genruntimeconfig.cache
-C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\testhost.exe
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\testhost.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
-C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
-C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\nunit.engine.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\testhost.exe
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\Selenium_BDD_Framework.deps.json
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\Selenium_BDD_Framework.runtimeconfig.json
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\Selenium_BDD_Framework.runtimeconfig.dev.json
@@ -210,7 +210,6 @@ C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.csprojAssemblyReference.cache
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.AssemblyInfoInputs.cache
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.AssemblyInfo.cs
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.csproj.CoreCompileInputs.cache
@@ -218,4 +217,3 @@ C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.pdb
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1\Selenium_BDD_Framework.genruntimeconfig.cache
-C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\Selenium_BDD_Framework.dll.config
