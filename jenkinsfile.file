@@ -26,7 +26,7 @@ pipeline {
 										   // bat '"C:\\Program Files (x86)\\NUnit.org\\nunit-console\\nunit3-console.exe" "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll" "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\FeatureFiles\Login.feature --where cat == Sanity"'
 										   
 										   //***************************************************************************************************************************************
-										   bat '"dotnet vstest Selenium_BDD_Framework.dll"'
+										   bat 'dotnet vstest "./Selenium_BDD_Framework.dll"'
 										   //'dotnet vstest "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
 											  }
 										   }
