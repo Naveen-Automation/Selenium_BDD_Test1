@@ -1,34 +1,30 @@
 //Jenkins pipeline as a code
 
+//Grovy Variables
+
 pipeline {
     agent any
     //Set stages
     stages {
-	    //stage('GIT Checkout') {
-            //steps {
-               //git branch: 'master', credentialsId: 'bc09cac4-1d6d-4838-945a-fc4a6dd0cbb5', url: 'https://github.com/Naveen-Automation/Selenium_BDD_Test1.git'
-			   //bat '"C:/NAVEEN/AUTOMATION/Nuget/nuget.exe" restore Selenium_BDD_Framework.sln'
-			   //git credentialsId: 'bc09cac4-1d6d-4838-945a-fc4a6dd0cbb5', url: 'https://github.com/Naveen-Automation/BDD_Framework_Lloyds.git'
-			   //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'bc09cac4-1d6d-4838-945a-fc4a6dd0cbb5', url: 'https://github.com/Naveen-Automation/BDD_Framework_Lloyds.git']]])
-				//echo 'Git Checkout'
-			//}
-        //}
+	    stage('GIT Checkout') {
+            steps {
+					git branch: 'master', credentialsId: 'bc09cac4-1d6d-4838-945a-fc4a6dd0cbb5', url: 'https://github.com/Naveen-Automation/Selenium_BDD_Test1.git'
+				  }
+        }
         stage('Build') {
 						steps {
-							bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.sln"'
+								//bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.sln"'
+								echo 'Build Succesfull'
 							  }
 						}
-        stage('Automated Test Execution') {
-										steps {
-											//MSTEST Test runner command 
-										   //bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\MSTest.exe" "/testcontainer:C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll" "/test:C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\FeatureFiles\\Login.feature"'
-										   //NUNIT Test runner execution command. Currently not compatible with .NetCore. It may work with .NetFramework
-										   // bat '"C:\\Program Files (x86)\\NUnit.org\\nunit-console\\nunit3-console.exe" "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll" "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\FeatureFiles\Login.feature --where cat == Sanity"'
-										   
-										   //***************************************************************************************************************************************
-										   bat 'dotnet vstest "\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
-										   //'dotnet vstest "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
-											  }
-										   }
+        stage('Test Execution') {
+								steps {
+										bat 'dotnet vstest "\\bin\\Debug\\netcoreapp3.1\\Selenium_BDD_Framework.dll"'
+									  }
+								}
     }
 }
+
+
+
+
