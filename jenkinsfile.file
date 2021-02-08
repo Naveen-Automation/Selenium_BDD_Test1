@@ -1,7 +1,7 @@
 //Jenkins pipeline as a code
 
 //Grovy Variables
-solutionName='Selenium_BDD_Framework.sln'
+//solutionName='Selenium_BDD_Framework.sln'
 
 pipeline {
     agent any
@@ -24,11 +24,10 @@ pipeline {
 									  }
 								}
 		stage('Report Generation') {
-		steps {
-				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'DeclarativeSanityJob\\ExtentReports\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'ABCD'])
-			  }
-		}
-								
+								steps {
+										publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'DeclarativeSanityJob\\\\ExtentReports', reportFiles: 'index.html', reportName: 'HTML_Report', reportTitles: 'ABCD'])
+									  }
+								}
     }
 }
 
