@@ -26,7 +26,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgBoDi Condition=" '$(PkgBoDi)' == '' ">C:\Users\navee\.nuget\packages\bodi\1.4.1</PkgBoDi>
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\navee\.nuget\packages\newtonsoft.json\10.0.3</PkgNewtonsoft_Json>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\navee\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgNUnit_ConsoleRunner Condition=" '$(PkgNUnit_ConsoleRunner)' == '' ">C:\Users\navee\.nuget\packages\nunit.consolerunner\3.12.0</PkgNUnit_ConsoleRunner>
   </PropertyGroup>
 </Project>
