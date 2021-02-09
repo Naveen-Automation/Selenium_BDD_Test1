@@ -4,3 +4,4 @@
 @Sanity
 Scenario: Launch Browser
 	Given I launch browser "chrome" browser
+	#When I search text "google"

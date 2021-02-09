@@ -10,12 +10,14 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
+using Selenium_BDD_Framework.Architecture;
+using System;
 using TechTalk.SpecFlow;
 
 namespace Selenium_BDD_Framework.Reporting
 {
     [Binding]
-    public static class ExtentReportingHooks
+    public class ExtentReportingHooks : ArchitectureBaseClass
     {
         #region Class Fields
         private static FeatureContext _featureContext;
@@ -32,9 +34,18 @@ namespace Selenium_BDD_Framework.Reporting
         [BeforeTestRun]
         public static void StartReportingEnginee()
         {
+
             //Need to take out the hard code
-            _extentHTMLReporter = new ExtentHtmlReporter(@"C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\TestResults\HTMLReports\Result.html");
-            //Need to see why AventStack.ExtentReports.Reporter is required before configurations when we already have using statement
+            if (_executionSource == "JENKINS")
+            {
+                _extentHTMLReporter = new ExtentHtmlReporter(_userProfileFolderPath + _jenkinsLocalWorkspacePath + _jenkinsPipeLineName  + _testResultsRelativePath);
+            }
+            else if (_executionSource == "LOCAL")
+            {
+                //_projectFolderLocalPath.Replace()
+                _extentHTMLReporter = new ExtentHtmlReporter(_projectFolderLocalPath + _testResultsRelativePath);
+            }
+                //Need to see why AventStack.ExtentReports.Reporter is required before configurations when we already have using statement
            // _extentHTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             _reporter = new ExtentReports();
             _reporter.AttachReporter(_extentHTMLReporter);
