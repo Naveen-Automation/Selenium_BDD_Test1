@@ -45,7 +45,7 @@ namespace Selenium_BDD_Framework.Reporting
                 //_projectFolderLocalPath.Replace()
                 _extentHTMLReporter = new ExtentHtmlReporter(_projectFolderLocalPath + _testResultsRelativePath);
             }
-                //Need to see why AventStack.ExtentReports.Reporter is required before configurations when we already have using statement
+//Need to see why AventStack.ExtentReports.Reporter is required before configurations when we already have using statement
            // _extentHTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             _reporter = new ExtentReports();
             _reporter.AttachReporter(_extentHTMLReporter);
