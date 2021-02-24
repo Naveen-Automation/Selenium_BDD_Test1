@@ -25,12 +25,9 @@ namespace Selenium_BDD_Framework
         public static void Initialise()
         {
             // log4net.Config.XmlConfigurator.Configure();
-            log.Error("Welcome to the world of logging");
             var services = new ServiceCollection();
             var globalVariables = Configure(services);
             Services = services.BuildServiceProvider();
-
-
         }
 
         private static GlobalVariables Configure(IServiceCollection services)

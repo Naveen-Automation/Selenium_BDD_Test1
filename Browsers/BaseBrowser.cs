@@ -3,6 +3,7 @@ using OpenQA.Selenium.Support.UI;
 using Selenium_BDD_Framework.EnvVariables;
 using Selenium_BDD_Framework.Utilities;
 using System;
+using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace Selenium_BDD_Framework.Browsers
 {

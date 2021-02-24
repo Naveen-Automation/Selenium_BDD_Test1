@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6JoAtd3wbZpRmKgvtQhwzjk8+0ZZCqrvSSpTjpa0z3HgRS+jkxM1mc8yBFmlq8T72zb4TISClhuezjnjZc9oxQ==",
+  "dgSpecHash": "RZNNWMjW/UNhXHHVD/ZYTentdWTt4yIDN4e3LkDuk20eoUquqRALNr8HkHhhZuCSY8U5Q7tADXSdLaDm7u56wA==",
   "success": true,
   "projectFilePath": "C:\\NAVEEN\\AUTOMATION\\GIT Repositories\\Selenium_BDD_Test1\\Selenium_BDD_Framework.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\navee\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
     "C:\\Users\\navee\\.nuget\\packages\\dnsclient\\1.2.0\\dnsclient.1.2.0.nupkg.sha512",
     "C:\\Users\\navee\\.nuget\\packages\\dotnetseleniumextras.pageobjects.core\\3.12.0\\dotnetseleniumextras.pageobjects.core.3.12.0.nupkg.sha512",
+    "C:\\Users\\navee\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\navee\\.nuget\\packages\\extentreports\\4.1.0\\extentreports.4.1.0.nupkg.sha512",
     "C:\\Users\\navee\\.nuget\\packages\\gherkin\\6.0.0\\gherkin.6.0.0.nupkg.sha512",
     "C:\\Users\\navee\\.nuget\\packages\\google.protobuf\\3.7.0\\google.protobuf.3.7.0.nupkg.sha512",
