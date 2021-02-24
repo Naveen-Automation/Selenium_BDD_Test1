@@ -1,8 +1,10 @@
-﻿using OpenQA.Selenium;              //IWebdriver definition present here
-using OpenQA.Selenium.Chrome;       // ChromeDriver class presence
-using OpenQA.Selenium.Firefox;      // Firefox class presence
-using System;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;              //IWebdriver definition present here
 using TechTalk.SpecFlow;
+using Selenium_BDD_Framework.Browsers;
+using Selenium_BDD_Framework.EnvVariables;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 
 namespace Selenium_BDD_Framework
 {
@@ -10,22 +12,23 @@ namespace Selenium_BDD_Framework
     public class CommonStepDefinition
     {
         public IWebDriver driver;
+        public GlobalVariables globalVariables;
+       // public BrowserBase browser;
 
-        [Given(@"I launch browser ""(.*)"" browser")]
-        public void GivenILaunchBrowserBrowser(string browserType)
+        #region ----------------------------------CONSTRUCTOR------------------------------------------
+        public CommonStepDefinition()
         {
-            switch (browserType)
-            {
-                case "chrome":
-                    driver = new ChromeDriver();
-                    break;
-                case "firefox":
-                    driver = new FirefoxDriver();
-                    break;
-            }
-            driver.Navigate().GoToUrl("http://www.gmail.com");
+            globalVariables = StartUp.Services.GetService<GlobalVariables>();
+        }
+        #endregion CONSTRUCTOR
 
-          
+
+        [Given(@"I launch browser")]
+        public void GivenILaunchBrowserBrowser()
+        {
+            GlobalVariables.browser = BrowserFactory.Launch(GlobalVariables.browserType);
+            GlobalVariables.browser.LaunchApplication();
+
         }
 
         [When(@"I search text ""(.*)""")]

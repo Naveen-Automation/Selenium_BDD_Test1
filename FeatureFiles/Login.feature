@@ -3,5 +3,5 @@
 
 @Sanity
 Scenario: Launch Browser
-	Given I launch browser "chrome" browser
+	Given I launch browser
 	#When I search text "google"
