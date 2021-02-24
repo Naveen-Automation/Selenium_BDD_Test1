@@ -38,7 +38,7 @@ namespace Selenium_BDD_Framework
             //Static Variables
             GlobalVariables globalVariables;
 
-            var configBuilder = new ConfigurationBuilder().SetBasePath(GlobalVariables.projectFolderPath).AddJsonFile(GlobalVariables.appSettingsJsonRelativePath).Build();
+            var configBuilder = new ConfigurationBuilder().SetBasePath(GlobalVariables.ProjectFolderPath).AddJsonFile(GlobalVariables.AppSettingsJsonRelativePath).Build();
             globalVariables = new GlobalVariables();
             configBuilder.Bind("AppSettings", globalVariables);
             services.AddSingleton(globalVariables);
@@ -56,7 +56,7 @@ namespace Selenium_BDD_Framework
         public static void CleanUp()
         {
             
-            GlobalVariables.browser.CloseBrowser();
+            GlobalVariables.Browser.CloseBrowser();
         }
 
 

@@ -13,7 +13,7 @@ namespace Selenium_BDD_Framework
     {
         public IWebDriver driver;
         public GlobalVariables globalVariables;
-       // public BrowserBase browser;
+       // public BaseBrowser browser;
 
         #region ----------------------------------CONSTRUCTOR------------------------------------------
         public CommonStepDefinition()
@@ -26,8 +26,9 @@ namespace Selenium_BDD_Framework
         [Given(@"I launch browser")]
         public void GivenILaunchBrowserBrowser()
         {
-            GlobalVariables.browser = BrowserFactory.Launch(GlobalVariables.browserType);
-            GlobalVariables.browser.LaunchApplication();
+            //browser = BrowserFactory.Launch(GlobalVariables.browserType);
+            GlobalVariables.Browser = BrowserFactory.Launch(GlobalVariables.BrowserType);
+            GlobalVariables.Browser.LaunchApplication();
 
         }
 

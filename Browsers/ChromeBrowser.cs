@@ -5,8 +5,9 @@ using System;
 
 namespace Selenium_BDD_Framework.Browsers
 {
-    public class ChromeBrowser : BrowserBase
+    public sealed class ChromeBrowser : BaseBrowser
     {
+
         public override void LaunchBrowser()
         {
             ChromeOptions chromeOptions = new ChromeOptions();
@@ -19,28 +20,21 @@ namespace Selenium_BDD_Framework.Browsers
             chromeOptions.AddUserProfilePreference("profile.password_manager_enabled" , false);
           
             // Run chrome browser in headless mode, based on the flag passed from Config.json file
-            if (GlobalVariables.headlessFlag)
+            if (GlobalVariables.HeadlessFlag)
             {
                 chromeOptions.AddArguments("headless");
             }
 
             //Launch chrome driver instance
-            driver = new ChromeDriver(Environment.CurrentDirectory, chromeOptions, TimeSpan.FromSeconds(GlobalVariables.timeOut) );
+            Driver = new ChromeDriver(Environment.CurrentDirectory, chromeOptions, TimeSpan.FromSeconds(GlobalVariables.TimeOut) );
 
             // Run chrome browser in headless mode, based on the flag passed from Config.json file
-            if (GlobalVariables.maximizeBrowser)
+            if (GlobalVariables.MaximizeBrowser)
             {
-                driver.Manage().Window.Maximize();
+                Driver.Manage().Window.Maximize();
             }
 
         }
 
-        public override void TakeScreenShot(string fileName)
-        {
-            Screenshot screenShot = ((ITakesScreenshot)driver).GetScreenshot();
-
-            screenShot.SaveAsFile(@"C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\TestResults\Sample.png", ScreenshotImageFormat.Png);
-
-        }
     }
 }

@@ -36,14 +36,14 @@ namespace Selenium_BDD_Framework.Reporting
         {
 
             //Need to take out the hard code
-            if (executionSource == "JENKINS")
+            if (ExecutionSource == "JENKINS")
             {
-                _extentHTMLReporter = new ExtentHtmlReporter(userProfileFolderPath + jenkinsLocalWorkspacePath + jenkinsPipeLineName  + testResultsRelativePath);
+                _extentHTMLReporter = new ExtentHtmlReporter(UserProfileFolderPath + JenkinsLocalWorkspacePath + JenkinsPipeLineName  + TestReportRelativePath);
             }
-            else if (executionSource == "LOCAL")
+            else if (ExecutionSource == "LOCAL")
             {
                 //_projectFolderLocalPath.Replace()
-                _extentHTMLReporter = new ExtentHtmlReporter(projectFolderPath + testResultsRelativePath);
+                _extentHTMLReporter = new ExtentHtmlReporter(ProjectFolderPath + TestReportRelativePath);
             }
             //Need to see why AventStack.ExtentReports.Reporter is required before configurations when we already have using statement
            // _extentHTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;

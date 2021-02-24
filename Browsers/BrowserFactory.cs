@@ -11,9 +11,9 @@ namespace Selenium_BDD_Framework.Browsers
     class BrowserFactory
     {
         public static IWebDriver driver { get; set; }
-        public static BrowserBase browser { get; set; }
+        public static BaseBrowser browser { get; set; }
 
-        public static BrowserBase Launch(string browserType)
+        public static BaseBrowser Launch(string browserType)
         {
             switch (browserType.ToUpper())
             {

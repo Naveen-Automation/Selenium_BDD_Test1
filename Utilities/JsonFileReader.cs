@@ -9,9 +9,9 @@ namespace Selenium_BDD_Framework.Utilities
     {
         public static string ReadJsonFile(string keyName)
         {
-            dynamic jsonFile = JsonConvert.DeserializeObject(File.ReadAllText($"{GlobalVariables.projectFolderPath}{GlobalVariables.appSettingsJsonRelativePath}"));
+            dynamic jsonFile = JsonConvert.DeserializeObject(File.ReadAllText($"{GlobalVariables.ProjectFolderPath}{GlobalVariables.AppSettingsJsonRelativePath}"));
             //Console.WriteLine(jsonFile[GlobalVariables.jsonRootAttribute][keyName]);
-            JToken appURL = jsonFile.SelectToken($"{GlobalVariables.jsonRootAttribute}.{keyName}");
+            JToken appURL = jsonFile.SelectToken($"{GlobalVariables.JsonRootAttribute}.{keyName}");
             return (string)appURL;
         }
     }
