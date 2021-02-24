@@ -28,7 +28,8 @@ namespace Selenium_BDD_Framework.EnvVariables
 
         #region PROPERTIES MAPPED WITH APPSETTINGS JSON 
 
-        public static string AppURL { get; set; } = JsonFileReader.ReadJsonFile("AppURL");
+        public static string MyStoreURL { get; set; } = JsonFileReader.ReadJsonFile("AppURL");
+        public static string AnyOtherStore { get; set; } = JsonFileReader.ReadJsonFile("AppURL");
         public static string BrowserType { get; } = JsonFileReader.ReadJsonFile("Chrome");
         public static string UserName { get; set; } = JsonFileReader.ReadJsonFile("UserName");
         public static string Password { get; set; } = JsonFileReader.ReadJsonFile("Password");

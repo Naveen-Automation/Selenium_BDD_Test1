@@ -23,12 +23,12 @@ namespace Selenium_BDD_Framework
         #endregion CONSTRUCTOR
 
 
-        [Given(@"I launch browser")]
-        public void GivenILaunchBrowserBrowser()
+        [Given(@"I launch browser and navigate to ""(.*)"")) application")]
+        public void GivenILaunchBrowserBrowser(string applicationName)
         {
             //browser = BrowserFactory.Launch(GlobalVariables.browserType);
             GlobalVariables.Browser = BrowserFactory.Launch(GlobalVariables.BrowserType);
-            GlobalVariables.Browser.LaunchApplication();
+            GlobalVariables.Browser.LaunchApplication(applicationName);
 
         }
 

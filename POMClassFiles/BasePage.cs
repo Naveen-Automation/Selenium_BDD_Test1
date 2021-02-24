@@ -18,6 +18,7 @@ namespace Selenium_BDD_Framework.POMClassFiles
             {
                 PageFactory.InitElements(browser.Driver, this);
             }
+            Browser = browser;
         }
         #endregion
 

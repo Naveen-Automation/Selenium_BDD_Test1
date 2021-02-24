@@ -2,10 +2,9 @@
 using OpenQA.Selenium.Support.UI;
 using Selenium_BDD_Framework.EnvVariables;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
-using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
+
+
 namespace Selenium_BDD_Framework.WrapperClasses
 {
     public static class WebElementExtensionMethods

@@ -20,11 +20,20 @@ namespace Selenium_BDD_Framework.Browsers
         #endregion
 
         #region METHODS
-        public void LaunchApplication()
+        public void LaunchApplication(string applicationName)
         {
             //string url = JsonFileReader.ReadJsonFile("AppURL");
-
-            Driver.Navigate().GoToUrl(GlobalVariables.AppURL);
+            applicationName = applicationName.Replace(" ", string.Empty);
+            applicationName = applicationName.Trim();
+            switch (applicationName)
+            {
+                case "MYSTORE":
+                    Driver.Navigate().GoToUrl(GlobalVariables.MyStoreURL);
+                    break;
+                case "ANYOTHERSTORE":
+                    break;
+            }
+            
 
             //Implicit wait
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalVariables.timeOut); 
