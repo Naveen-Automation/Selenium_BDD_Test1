@@ -10,14 +10,13 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
-using Selenium_BDD_Framework.Architecture;
-using System;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
 using TechTalk.SpecFlow;
 
-namespace Selenium_BDD_Framework.Reporting
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Reporting
 {
     [Binding]
-    public class ExtentReportingHooks : ArchitectureBaseClass
+    public class ExtentReportingHooks : GlobalVariables
     {
         #region Class Fields
         private static FeatureContext _featureContext;
@@ -31,22 +30,14 @@ namespace Selenium_BDD_Framework.Reporting
         #endregion Class Fields
 
         #region Before Test Run
-        [BeforeTestRun]
+        [BeforeTestRun(Order = 1)]
         public static void StartReportingEnginee()
         {
 
-            //Need to take out the hard code
-            if (ExecutionSource == "JENKINS")
-            {
-                _extentHTMLReporter = new ExtentHtmlReporter(UserProfileFolderPath + JenkinsLocalWorkspacePath + JenkinsPipeLineName  + TestReportRelativePath);
-            }
-            else if (ExecutionSource == "LOCAL")
-            {
-                //_projectFolderLocalPath.Replace()
-                _extentHTMLReporter = new ExtentHtmlReporter(ProjectFolderPath + TestReportRelativePath);
-            }
+            _extentHTMLReporter = new ExtentHtmlReporter($"{GlobalVariables.HTMLReportsPath}{TestReportRelativePath}");
+
             //Need to see why AventStack.ExtentReports.Reporter is required before configurations when we already have using statement
-           // _extentHTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+            // _extentHTMLReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             _reporter = new ExtentReports();
             _reporter.AttachReporter(_extentHTMLReporter);
 
@@ -112,16 +103,44 @@ namespace Selenium_BDD_Framework.Reporting
             switch (_scenarioBlock)
             {
                 case ScenarioBlock.Given:
-                    _scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text);
+                    if (_scenarioContext.TestError != null)
+                    {
+                        _scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message + "\n" + _scenarioContext.TestError.StackTrace);
+                    }
+                    else
+                    {
+                        _scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Pass("");
+                    }
                     break;
                 case ScenarioBlock.When:
-                    _scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text);
+                    if (_scenarioContext.TestError != null)
+                    {
+                        _scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message + "\n" + _scenarioContext.TestError.StackTrace);
+                    }
+                    else
+                    {
+                        _scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Pass("");
+                    }
                     break;
                 case ScenarioBlock.Then:
-                    _scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text);
+                    if (_scenarioContext.TestError != null)
+                    {
+                        _scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message + "\n" + _scenarioContext.TestError.StackTrace);
+                    }
+                    else
+                    {
+                        _scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Pass("");
+                    }
                     break;
                 default:
-                    _scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text);
+                    if (_scenarioContext.TestError != null)
+                    {
+                        _scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message + "\n" + _scenarioContext.TestError.StackTrace);
+                    }
+                    else
+                    {
+                        _scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text).Pass("");
+                    }
                     break;
             }
         }

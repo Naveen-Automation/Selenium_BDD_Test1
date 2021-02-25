@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Selenium_BDD_Framework.Logs
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Logs
 {
     public class LogHelper
     {

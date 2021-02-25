@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Selenium_BDD_Framework.Browsers
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers
 {
     class BrowserFactory
     {

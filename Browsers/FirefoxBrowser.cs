@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium.Firefox;
-using Selenium_BDD_Framework.Utilities;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Utilities;
 
-namespace Selenium_BDD_Framework.Browsers
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers
 {
     public class FirefoxBrowser : BaseBrowser
     {

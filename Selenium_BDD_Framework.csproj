@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="FeatureFiles\TShirtOrder - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Configurations\AppSettings.json" />
   </ItemGroup>
 
@@ -41,6 +45,19 @@
     <PackageReference Include="SpecFlow" Version="3.6.23" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.6.23" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="FeatureFiles\Scenario1_TShirt_Order_And_Verify_Order.feature.cs">
+      <DependentUpon>Scenario1_TShirt_Order_And_Verify_Order.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="FeatureFiles\Scenario1_TShirt_Order_And_Verify_Order.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
-﻿using OpenQA.Selenium;
-using Selenium_BDD_Framework.Browsers;
-using Selenium_BDD_Framework.Utilities;
+﻿using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Utilities;
+using OpenQA.Selenium;
 using System;
 
-namespace Selenium_BDD_Framework.EnvVariables
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables
 {
     public class GlobalVariables
     {
@@ -22,16 +22,20 @@ namespace Selenium_BDD_Framework.EnvVariables
         public static string JsonRootAttribute { get; } = "AppSettings";
         public static string UserProfileFolderPath { get; } = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         public static string ProjectFolderPath { get; } = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
-
+        public static int ScreenShotCounter { get; set; } = 0;
+        public static string HTMLReportsPath { get; set; } = "";
+        public static string ScreenShotsPath { get; set; } = "";
+        
         #endregion
 
 
         #region PROPERTIES MAPPED WITH APPSETTINGS JSON 
 
-        public static string MyStoreURL { get; set; } = JsonFileReader.ReadJsonFile("AppURL");
-        public static string AnyOtherStore { get; set; } = JsonFileReader.ReadJsonFile("AppURL");
-        public static string BrowserType { get; } = JsonFileReader.ReadJsonFile("Chrome");
+        public static string MyStoreURL { get; set; } = JsonFileReader.ReadJsonFile("MyStoreURL");
+        public static string AnyOtherStore { get; set; } = JsonFileReader.ReadJsonFile("AnyOtherStore");
+        public static string BrowserType { get; } = JsonFileReader.ReadJsonFile("BrowserType");
         public static string UserName { get; set; } = JsonFileReader.ReadJsonFile("UserName");
+        public static string UserEmail { get; set; } = JsonFileReader.ReadJsonFile("UserEmail");
         public static string Password { get; set; } = JsonFileReader.ReadJsonFile("Password");
         public static bool ScreenShotsFlag { get; set; } = Convert.ToBoolean(JsonFileReader.ReadJsonFile("ScreenShotsFlag"));
         public static string TestResultsRelativePath { get; set; } = JsonFileReader.ReadJsonFile("TestResultsRelativePath");

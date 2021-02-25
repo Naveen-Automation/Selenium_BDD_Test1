@@ -1,11 +1,11 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Selenium_BDD_Framework.EnvVariables;
-using Selenium_BDD_Framework.Utilities;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Utilities;
 using System;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
-namespace Selenium_BDD_Framework.Browsers
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers
 {
     public abstract class BaseBrowser
     {
@@ -22,15 +22,15 @@ namespace Selenium_BDD_Framework.Browsers
         #region METHODS
         public void LaunchApplication(string applicationName)
         {
-            //string url = JsonFileReader.ReadJsonFile("AppURL");
             applicationName = applicationName.Replace(" ", string.Empty);
-            applicationName = applicationName.Trim();
+            applicationName = applicationName.Trim().ToUpper();
             switch (applicationName)
             {
                 case "MYSTORE":
                     Driver.Navigate().GoToUrl(GlobalVariables.MyStoreURL);
                     break;
                 case "ANYOTHERSTORE":
+                    Driver.Navigate().GoToUrl(GlobalVariables.AnyOtherStore);
                     break;
             }
             
@@ -38,6 +38,14 @@ namespace Selenium_BDD_Framework.Browsers
             //Implicit wait
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalVariables.timeOut); 
         }
+
+
+        public void ImplicitWait()
+        {
+            //Implicit wait
+            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalVariables.timeOut); 
+        }
+
 
         public void CloseBrowser()
         {
@@ -58,8 +66,10 @@ namespace Selenium_BDD_Framework.Browsers
         ///<param name="fileName">File Path of the screen shot</param>
         public void TakeScreenShot(string fileName)
         {
+            GlobalVariables.ScreenShotCounter = GlobalVariables.ScreenShotCounter + 1;
             Screenshot screenShot = ((ITakesScreenshot)Driver).GetScreenshot();
-            screenShot.SaveAsFile(@"C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\TestResults\Sample.png", ScreenshotImageFormat.Png);
+            screenShot.SaveAsFile($"{GlobalVariables.ScreenShotsPath}\\{fileName}{GlobalVariables.ScreenShotCounter}.png", ScreenshotImageFormat.Png);
+                   
         }
 
 

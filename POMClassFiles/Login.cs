@@ -1,15 +1,16 @@
-﻿using OpenQA.Selenium;
-using Selenium_BDD_Framework.Browsers;
+﻿using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Utilities;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.WrapperClasses;
+using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System;
-using Selenium_BDD_Framework.WrapperClasses;
-using Selenium_BDD_Framework.EnvVariables;
+using TechTalk.SpecFlow;
 
-namespace Selenium_BDD_Framework.POMClassFiles
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.POMClassFiles
 {
-    class Login : ParentPOMClasses
+    public class Login : ParentPOMClasses
     {
-
 
         #region CONSTRUCTOR
 
@@ -20,37 +21,48 @@ namespace Selenium_BDD_Framework.POMClassFiles
 
         #region WEBELEMENTS
 
-        [FindsBy(How = How.Id, Using = "name")]
-        public IWebElement FullNameTxt { get; }
+        [FindsBy(How = How.Id, Using = "SubmitLogin")]
+        public IWebElement SignInBtn { get; set; }
 
-        [FindsBy(How = How.Id, Using = "password")]
-        public IWebElement PasswordTxt { get; }
+        [FindsBy(How = How.Id, Using = "email")]
+        public IWebElement EmailTxt { get; set; }
 
-        [FindsBy(How = How.Id, Using = "login")]
-        public IWebElement LoginBtn { get; }
+        [FindsBy(How = How.Id, Using = "passwd")]
+        public IWebElement PasswordTxt { get; set; }
 
         #endregion
 
 
         public override bool CheckPageLoaded()
         {
-            //WebElementExtensionMethods.WaitUntillDisplayedAndEnabled(GoogleSearchTxt,GlobalVariables.Browser.Driver)
-            //GoogleSearchTxt.WaitUntillDisplayedAndEnabled(Browser.Driver);
-            return FullNameTxt.WaitUntillDisplayedAndEnabled(GlobalVariables.Browser.Driver);
+            bool isPageLoaded;
+            isPageLoaded = SignInBtn.WaitUntillDisplayedAndEnabled(GlobalVariables.Browser.Driver);
+            return isPageLoaded;
         }
 
 
-        public override void FillPageForm()
-        {
-            FullNameTxt.SendKeys("Veeranki Naveen");
-            PasswordTxt.SendKeys(GlobalVariables.Password);
-            LoginBtn.Click();
-        }
-
-
-        public override void MoveToNextPage()
+        public override void FillPageForm(Table table)
         {
             throw new NotImplementedException();
+        }
+
+        public void EnterSignInDetials()
+        {
+            EmailTxt.SendKeys(GlobalVariables.UserEmail);
+            PasswordTxt.SendKeys(GlobalVariables.Password);
+        }
+
+
+        public override void MoveToNextPage(string elementName)
+        {
+            elementName = StringManipulation.RemoveSpaceInBetweenTrimUpperCase(elementName);
+            switch (elementName)
+            {
+                case "SIGNIN":
+                    SignInBtn.Click();
+                    break;
+            }
+
         }
     }
 }

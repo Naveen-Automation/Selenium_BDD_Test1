@@ -1,8 +1,8 @@
-﻿using OpenQA.Selenium.Chrome;
-using Selenium_BDD_Framework.EnvVariables;
+﻿using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
+using OpenQA.Selenium.Chrome;
 using System;
 
-namespace Selenium_BDD_Framework.Browsers
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers
 {
     public sealed class ChromeBrowser : BaseBrowser
     {

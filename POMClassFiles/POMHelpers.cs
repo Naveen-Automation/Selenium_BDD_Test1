@@ -1,8 +1,8 @@
-﻿using Selenium_BDD_Framework.Browsers;
+﻿using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers;
 using System;
 using System.Reflection;
 
-namespace Selenium_BDD_Framework.POMClassFiles
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.POMClassFiles
 {
     public static class POMHelpers
     {
@@ -17,7 +17,8 @@ namespace Selenium_BDD_Framework.POMClassFiles
             string assemblyName = Assembly.GetExecutingAssembly().FullName.Split(',')[0];
             try
             {
-                string fullQualifiedPageClassName = $"{(assemblyName)}.POMClassFiles.{pageName},{assemblyName}";
+                //Namespace can be configured in AppSettings Json
+                string fullQualifiedPageClassName = $"Com.Test.VeerankiNaveen.{assemblyName}.POMClassFiles.{pageName},{assemblyName}";
                 GetCurrentPageInstance = Activator.CreateInstance(Type.GetType(fullQualifiedPageClassName), browser) as BasePage;
                 
                 //Throw an exception if the class we are trying to create doesnot derive from BasePage

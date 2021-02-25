@@ -5,9 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
-using Selenium_BDD_Framework.EnvVariables;
-using Selenium_BDD_Framework.Browsers;
-using Selenium_BDD_Framework.Logs;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Logs;
+using System.IO;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Utilities;
 
 //Snippet to compiler to go and check for app.config file for log4net section
 [assembly: log4net.Config.XmlConfigurator(Watch =true)]
@@ -19,16 +21,24 @@ namespace Selenium_BDD_Framework
     public class StartUp
     {
         public static IServiceProvider Services { get; set; }
-        private static readonly log4net.ILog log = LogHelper.GetLogger();//log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log = LogHelper.GetLogger();
 
-        [BeforeTestRun]
+        [BeforeTestRun(Order = 0)]
         public static void Initialise()
         {
             // log4net.Config.XmlConfigurator.Configure();
             var services = new ServiceCollection();
             var globalVariables = Configure(services);
             Services = services.BuildServiceProvider();
+
+            FileSystem.CreateDirectory("REPORT");
+            FileSystem.CreateDirectory("SCREEN_SHOTS");
+
         }
+
+
+
+
 
         private static GlobalVariables Configure(IServiceCollection services)
         {

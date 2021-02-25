@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Selenium_BDD_Framework.EnvVariables;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
 using System.IO;
 
-namespace Selenium_BDD_Framework.Utilities
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Utilities
 {
     class JsonFileReader
     {

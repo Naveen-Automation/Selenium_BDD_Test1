@@ -309,3 +309,4 @@ C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\obj\Debug\netcoreapp3.1
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\log4net.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\SeleniumExtras.PageObjects.dll
 C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
+C:\NAVEEN\AUTOMATION\GIT Repositories\Selenium_BDD_Test1\bin\Debug\netcoreapp3.1\SeleniumExtras.WaitHelpers.dll

@@ -1,11 +1,12 @@
 ﻿using OpenQA.Selenium.Support.PageObjects;
 using SeleniumExtras.PageObjects;
-using Selenium_BDD_Framework.Browsers;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.Browsers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TechTalk.SpecFlow;
 
-namespace Selenium_BDD_Framework.POMClassFiles
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.POMClassFiles
 {
     public abstract class BasePage
     {
@@ -27,10 +28,11 @@ namespace Selenium_BDD_Framework.POMClassFiles
         public abstract bool CheckPageLoaded();
 
 
-        public abstract void FillPageForm();
+        public abstract void FillPageForm(Table table);
 
 
-        public abstract void MoveToNextPage();
+        public abstract void MoveToNextPage(string elementName);
         #endregion
+
     }
 }

@@ -1,11 +1,11 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Selenium_BDD_Framework.EnvVariables;
+using Com.Test.VeerankiNaveen.Selenium_BDD_Framework.EnvVariables;
 using System;
 using System.Reflection;
+using OpenQA.Selenium.Interactions;
 
-
-namespace Selenium_BDD_Framework.WrapperClasses
+namespace Com.Test.VeerankiNaveen.Selenium_BDD_Framework.WrapperClasses
 {
     public static class WebElementExtensionMethods
     {
@@ -41,6 +41,32 @@ namespace Selenium_BDD_Framework.WrapperClasses
                     }
                 }
             });
+        }
+
+
+        public static void MouseOver (this IWebElement element, IWebDriver driver)
+        {
+            Actions builder = new Actions(driver);
+            builder.MoveToElement(element).Perform();
+        }
+
+
+        public static void MouseOverAndClick(this IWebElement elementToHover, IWebElement elementToClick, IWebDriver driver)
+        {
+            Actions builder = new Actions(driver);
+            builder.MoveToElement(elementToHover).Click(elementToClick).Build().Perform();
+        }
+
+
+
+        public static void JScriptMouseOver(this IWebElement element, IWebDriver driver)
+        {
+            string javaScript = "var evObj = document.createEvent('MouseEvents');" +
+                    "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" +
+                    "arguments[0].dispatchEvent(evObj);";
+
+            IJavaScriptExecutor executor = GlobalVariables.Browser.Driver as IJavaScriptExecutor;
+            executor.ExecuteScript(javaScript, element);
         }
     }
 }
